@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
-const port = 3001;
+const PORT = 3001;
 
 // Middleware
 app.use(express.json());
@@ -16,6 +16,6 @@ app.get('/message', (req, res) => {
 
 
 // Запуск сервера
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });

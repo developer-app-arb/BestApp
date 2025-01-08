@@ -6,13 +6,13 @@ import axios from 'axios';
 
 const App: React.FC = () => {
   const [message, setMessage] = useState<string>('');
-  const url = 'http://localhost:3001';
+  // const url = 'http://38.180.158.187:3001';
 
 
   useEffect(() => {
       const fetchMessage = async () => {
           try {
-              const response = await axios.get(`${url}/message`);
+              const response = await axios.get(`/message`);
               setMessage(response.data);
           } catch (error) {
               console.error('Error fetching message:', error);
